@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/transform" name="PayloadFactoryApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http">
+    <inSequence>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:HEAD" value="*****#####****######"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/PayLoadFactoryEndpoint.xml"/>
+      </call>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:BODY" value="json-eval($.)"/>
+      </log>
+      <payloadFactory media-type="json">
+        <format>
+          {
+          	"Telkom ID": "$1",
+          	"Telkom Kenya Comment": "$2"
+          }
+        </format>
+        <args>
+          <arg evaluator="xml" expression="//id"/>
+          <arg evaluator="xml" expression="//comments"/>
+        </args>
+      </payloadFactory>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>
