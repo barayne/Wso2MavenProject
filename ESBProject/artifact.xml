@@ -8,4 +8,10 @@
     <artifact name="MyNameApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/MyNameApi.xml</file>
     </artifact>
+    <artifact name="PayloadFactoryApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/PayloadFactoryApi.xml</file>
+    </artifact>
+    <artifact name="PayloadFactoryXmlApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/PayloadFactoryXmlApi.xml</file>
+    </artifact>
 </artifacts>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/transormxml" name="PayloadFactoryXmlApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http">
+    <inSequence>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:HEAD" value="*****#####****######"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/PayLoadFactoryEndpoint.xml"/>
+      </call>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:BODY" value="json-eval($.)"/>
+      </log>
+      <payloadFactory media-type="xml">
+        <format>
+          <XmlTest>
+            <name>$1</name>
+            <email>$2</email>
+          </XmlTest>
+        </format>
+        <args>
+          <arg evaluator="xml" expression="//comments"/>
+          <arg evaluator="xml" expression="//description"/>
+        </args>
+      </payloadFactory>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>
