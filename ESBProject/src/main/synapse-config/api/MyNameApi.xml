@@ -26,7 +26,7 @@
     <outSequence/>
     <faultSequence/>
   </resource>
-  <resource methods="PUT" protocol="http" uri-template="/comments">
+  <resource methods="PUT" protocol="http" uri-template="/comments/{uri.var.commentId}">
     <inSequence>
       <log description="LOG" level="custom">
         <property name="LOG:" value="PUT log name"/>
@@ -39,7 +39,7 @@
     <outSequence/>
     <faultSequence/>
   </resource>
-  <resource methods="DELETE" protocol="http" uri-template="/comments">
+  <resource methods="DELETE" protocol="http" uri-template="/comments/{uri.var.commentId}">
     <inSequence>
       <log description="LOG" level="custom">
         <property name="LOG" value="DELETE log name"/>
