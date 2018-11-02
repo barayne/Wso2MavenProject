@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/filter" name="FilterMediator" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http" uri-template="/{company}">
+    <inSequence>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:HEAD" value="*****#####****######"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/PayLoadFactoryEndpoint.xml"/>
+      </call>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:BODY" value="json-eval($.)"/>
+      </log>
+      <filter regex="Telkom" source="get-property('uri.var.company')">
+        <then>
+          <payloadFactory media-type="json">
+            <format>
+	          {
+	          	"Telkom ID": "$1",
+	          	"Comment": "$2",
+	          	"Company Description": "$3"
+	          }
+	        </format>
+            <args>
+              <arg evaluator="xml" expression="//id"/>
+              <arg evaluator="xml" expression="//comments"/>
+              <arg evaluator="xml" expression="//description"/>
+            </args>
+          </payloadFactory>
+          <respond/>
+        </then>
+        <else>
+          <filter regex="Wso2" source="get-property('uri.var.company')">
+            <then>
+              <payloadFactory media-type="json">
+                <format>
+				          {
+				          	"Customer ID": "$1",
+				          	"Customer Comment": "$2",
+				          	"Company Description": "$3"
+				          }
+				        </format>
+                <args>
+                  <arg evaluator="xml" expression="//id"/>
+                  <arg evaluator="xml" expression="//comments"/>
+                  <arg evaluator="xml" expression="//description"/>
+                </args>
+              </payloadFactory>
+              <respond/>
+            </then>
+            <else>
+              <payloadFactory media-type="json">
+                <format>
+				          {
+				          	"Error": "Company Not found!!!"
+				          }
+				        </format>
+                <args/>
+              </payloadFactory>
+              <property name="HTTP_SC" scope="axis2" type="STRING" value="400"/>
+              <respond/>
+            </else>
+          </filter>
+        </else>
+      </filter>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>
