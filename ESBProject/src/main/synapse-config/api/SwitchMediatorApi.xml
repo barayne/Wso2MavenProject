@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/switch" name="SwitchMediatorApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http" uri-template="/{company}">
+    <inSequence>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:HEAD" value="#######Start Log#####"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/PayLoadFactoryEndpoint.xml"/>
+      </call>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:Call" value="******Backend call******"/>
+      </log>
+      <switch source="get-property('uri.var.company')">
+        <case regex="Telkom">
+          <payloadFactory media-type="json">
+            <format>
+							{
+							"Telkom ID": "$1",
+							"Comment": "$2",
+							"Company Description": "$3"
+							}
+						</format>
+            <args>
+              <arg evaluator="xml" expression="//id"/>
+              <arg evaluator="xml" expression="//comments"/>
+              <arg evaluator="xml" expression="//description"/>
+            </args>
+          </payloadFactory>
+        </case>
+        <case regex="Wso2">
+          <payloadFactory media-type="json">
+            <format>
+							{
+							"Customer ID": "$1",
+							"Customer Comment": "$2",
+							"Company Description": "$3"
+							}
+						</format>
+            <args>
+              <arg evaluator="xml" expression="//id"/>
+              <arg evaluator="xml" expression="//comments"/>
+              <arg evaluator="xml" expression="//description"/>
+            </args>
+          </payloadFactory>
+        </case>
+        <default>
+          <payloadFactory media-type="json">
+            <format>
+							{
+							"Error": "Company Not found!!!"
+							}
+						</format>
+            <args/>
+          </payloadFactory>
+          <property name="HTTP_SC" scope="axis2" type="STRING" value="400"/>
+        </default>
+      </switch>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:BODY" value="json-eval($.)"/>
+      </log>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>

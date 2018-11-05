@@ -17,4 +17,10 @@
     <artifact name="FilterMediator" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/FilterMediator.xml</file>
     </artifact>
+    <artifact name="SwitchMediatorApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/SwitchMediatorApi.xml</file>
+    </artifact>
+    <artifact name="MergeDataApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/MergeDataApi.xml</file>
+    </artifact>
 </artifacts>
