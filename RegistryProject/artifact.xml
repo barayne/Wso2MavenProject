@@ -34,4 +34,11 @@
             <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
         </item>
     </artifact>
+    <artifact name="ResponseValidationSchema_json" groupId="ke.co.btl.wso2.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>ResponseValidationSchema.json</file>
+            <path>/_system/governance/schemas</path>
+            <mediaType>application/json</mediaType>
+        </item>
+    </artifact>
 </artifacts>

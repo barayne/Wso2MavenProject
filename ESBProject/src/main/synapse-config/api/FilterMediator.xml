@@ -15,12 +15,13 @@
         <then>
           <payloadFactory media-type="json">
             <format>
-	          {
-	          	"Telkom ID": "$1",
-	          	"Comment": "$2",
-	          	"Company Description": "$3"
-	          }
-	        </format>
+							{
+							"Telkom ID": "$1",
+							"Comment": "$2",
+							"Company Description":
+							"$3"
+							}
+						</format>
             <args>
               <arg evaluator="xml" expression="//id"/>
               <arg evaluator="xml" expression="//comments"/>
@@ -34,12 +35,13 @@
             <then>
               <payloadFactory media-type="json">
                 <format>
-				          {
-				          	"Customer ID": "$1",
-				          	"Customer Comment": "$2",
-				          	"Company Description": "$3"
-				          }
-				        </format>
+									{
+									"Customer ID": "$1",
+									"Customer Comment": "$2",
+									"Company
+									Description": "$3"
+									}
+								</format>
                 <args>
                   <arg evaluator="xml" expression="//id"/>
                   <arg evaluator="xml" expression="//comments"/>
@@ -51,10 +53,10 @@
             <else>
               <payloadFactory media-type="json">
                 <format>
-				          {
-				          	"Error": "Company Not found!!!"
-				          }
-				        </format>
+									{
+									"Error": "Company Not found!!!"
+									}
+								</format>
                 <args/>
               </payloadFactory>
               <property name="HTTP_SC" scope="axis2" type="STRING" value="400"/>

@@ -23,4 +23,19 @@
     <artifact name="MergeDataApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/MergeDataApi.xml</file>
     </artifact>
+    <artifact name="getUSerDataSequence" groupId="ke.co.btl.wso2.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/getUSerDataSequence.xml</file>
+    </artifact>
+    <artifact name="ValidateJsonSequence" groupId="ke.co.btl.wso2.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ValidateJsonSequence.xml</file>
+    </artifact>
+    <artifact name="SampleTemplate" groupId="ke.co.btl.wso2.template" version="1.0.0" type="synapse/sequenceTemplate" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/templates/SampleTemplate.xml</file>
+    </artifact>
+    <artifact name="TemplateExampleApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/TemplateExampleApi.xml</file>
+    </artifact>
+    <artifact name="classmediator" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/classmediator.xml</file>
+    </artifact>
 </artifacts>

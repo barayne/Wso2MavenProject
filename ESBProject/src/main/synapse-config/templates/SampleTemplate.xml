@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="SampleTemplate" xmlns="http://ws.apache.org/ns/synapse">
+  <parameter name="room"/>
+  <parameter name="price"/>
+  <sequence>
+    <log level="custom">
+      <property expression="$func:room" name="room"/>
+      <property expression="$func:price" name="price"/>
+    </log>
+  </sequence>
+</template>

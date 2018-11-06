@@ -12,6 +12,7 @@
     <module>RegistryProject</module>
     <module>ESBProject</module>
     <module>RegistryProject</module>
+    <module>TrainingClassMediator</module>
     <module>CARProjet</module>
   </modules>
   <build>
