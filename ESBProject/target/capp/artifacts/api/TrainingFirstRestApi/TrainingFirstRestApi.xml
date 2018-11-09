@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/trainingfirstrestapi" name="TrainingFirstRestApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG:" value="Get Logs"/>
+      </log>
+      <property description="Setting uri.var.Resource parameter"
+        name="uri.var.Resource" scope="default" type="STRING" value="comments"/>
+      <property description="Setting HTTP Method to GET"
+        name="HTTP_METHOD" scope="axis2" type="STRING" value="GET"/>
+      <call>
+        <endpoint key="gov:/endpoints/RestTestEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="GET" protocol="http" uri-template="/comments">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG:" value="Get Logs"/>
+      </log>
+      <property description="Setting uri.var.Resource parameter"
+        name="uri.var.Resource" scope="default" type="STRING" value="comments"/>
+      <property description="Setting HTTP Method to GET"
+        name="HTTP_METHOD" scope="axis2" type="STRING" value="GET"/>
+      <call>
+        <endpoint key="gov:/endpoints/RestTestEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="POST" protocol="http" uri-template="/addcomments">
+    <inSequence>
+      <log description="SecondLog" level="custom">
+        <property name="LOG:" value="POST logs"/>
+      </log>
+      <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
+      <property description="Setting uri.var.Resource parameter"
+        name="uri.var.Resource" scope="default" type="STRING" value="comments"/>
+      <call>
+        <endpoint key="gov:/endpoints/RestTestEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>

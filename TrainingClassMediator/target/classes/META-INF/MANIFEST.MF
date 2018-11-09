@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-Description: TrainingClassMediator
+Bundle-SymbolicName: TrainingClassMediator
+Built-By: barayne
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1541773186047
+Import-Package: org.apache.synapse,org.apache.synapse.mediators
+DynamicImport-Package: *
+Tool: Bnd-1.15.0
+Export-Package: ke.co.btl.wso2;uses:="org.apache.synapse.mediators,org
+ .apache.synapse"
+Bundle-Version: 1.0.0
+Bundle-Name: TrainingClassMediator
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_191
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ke.co.btl.wso2</groupId>
+  <artifactId>RegistryProject_module</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>RegistryProject_module</name>
+  <description>RegistryProject_module</description>
+  <modules>
+    <module>artifacts/resource/RestTestEndpoint</module>
+    <module>artifacts/resource/MyNameApiEndpoint</module>
+    <module>artifacts/resource/PayLoadFactoryEndpoint</module>
+    <module>artifacts/resource/AlbumsMeargeEndpoint</module>
+    <module>artifacts/resource/UsersMeargeEndpoint</module>
+    <module>artifacts/resource/ResponseValidationSchema_json</module>
+    <module>artifacts/resource/UsersEndpoint</module>
+    <module>artifacts/resource/EnrichEndpoint</module>
+    <module>artifacts/resource/MBendpoint</module>
+  </modules>
+</project>

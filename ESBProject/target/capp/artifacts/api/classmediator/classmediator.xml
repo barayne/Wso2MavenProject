@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/classmediator" name="classmediator" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http">
+    <inSequence>
+      <property name="myTestProperty" scope="default" type="STRING" value="Hi Telkom"/>
+      <class name="ke.co.btl.wso2"/>
+      <log level="custom">
+        <property expression="$ctx:myTestProperty2" name="Log printed from synapse"/>
+      </log>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>

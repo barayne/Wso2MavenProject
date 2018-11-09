@@ -1,0 +1,41 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "request"
+  ],
+  "properties": {
+    "request": {
+      "$id": "#/properties/request",
+      "type": "object",
+      "title": "The Request Schema",
+      "required": [
+        "userId",
+        "albumId"
+      ],
+      "properties": {
+        "userId": {
+          "$id": "#/properties/request/properties/userId",
+          "type": "integer",
+          "title": "The Userid Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "albumId": {
+          "$id": "#/properties/request/properties/albumId",
+          "type": "integer",
+          "title": "The Albumid Schema",
+          "default": 0,
+          "examples": [
+            2
+          ]
+        }
+      }
+    }
+  }
+}

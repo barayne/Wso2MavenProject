@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/kevin" name="MyNameApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http" uri-template="/comments">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG:" value="Get Log name"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/MyNameApiEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="POST" protocol="http" uri-template="/comments">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG:" value="Post Log name"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/MyNameApiEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="PUT" protocol="http" uri-template="/comments/{uri.var.commentId}">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG:" value="PUT log name"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/MyNameApiEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="DELETE" protocol="http" uri-template="/comments/{uri.var.commentId}">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG" value="DELETE log name"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/MyNameApiEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="GET" protocol="http" uri-template="/posts">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG:" value="Get Log name"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/MyNameApiEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="POST" protocol="http" uri-template="/posts">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG:" value="Post Log name"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/MyNameApiEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="PUT" protocol="http" uri-template="/posts/{uri.var.postId}">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG:" value="PUT log name"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/MyNameApiEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="DELETE" protocol="http" uri-template="/posts/{uri.var.postId}">
+    <inSequence>
+      <log description="LOG" level="custom">
+        <property name="LOG" value="DELETE log name"/>
+      </log>
+      <call>
+        <endpoint key="gov:/endpoints/MyNameApiEndpoint.xml"/>
+      </call>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>

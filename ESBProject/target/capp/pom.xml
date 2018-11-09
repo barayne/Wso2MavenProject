@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ke.co.btl.wso2</groupId>
+  <artifactId>ESBProject_module</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>ESBProject_module</name>
+  <description>ESBProject_module</description>
+  <modules>
+    <module>artifacts/api/TrainingFirstRestApi</module>
+    <module>artifacts/api/MyNameApi</module>
+    <module>artifacts/api/PayloadFactoryApi</module>
+    <module>artifacts/api/PayloadFactoryXmlApi</module>
+    <module>artifacts/api/FilterMediator</module>
+    <module>artifacts/api/SwitchMediatorApi</module>
+    <module>artifacts/api/MergeDataApi</module>
+    <module>artifacts/api/TemplateExampleApi</module>
+    <module>artifacts/api/classmediator</module>
+    <module>artifacts/api/IterateApi</module>
+    <module>artifacts/api/ForEachApi</module>
+    <module>artifacts/api/EnrichApi</module>
+    <module>artifacts/api/CloneApi</module>
+    <module>artifacts/api/MBtrainingApi</module>
+    <module>artifacts/endpoint/NamedEndPoint</module>
+    <module>artifacts/sequence/getUSerDataSequence</module>
+    <module>artifacts/sequence/ValidateJsonSequence</module>
+    <module>artifacts/sequence/MBSuccessSequence</module>
+    <module>artifacts/sequence/MBErrorSequence</module>
+    <module>artifacts/template/SampleTemplate</module>
+    <module>artifacts/message-store/MsgStoreTest</module>
+    <module>artifacts/message-processors/training-message-processor</module>
+  </modules>
+</project>

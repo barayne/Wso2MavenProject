@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/iterate" name="IterateApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http">
+    <inSequence>
+      <call>
+        <endpoint key="gov:/endpoints/UsersEndpoint.xml"/>
+      </call>
+      <log level="full"/>
+      <iterate expression="$body/jsonArray/jsonElement" preservePayload="true">
+        <target>
+          <sequence>
+            <property expression="//name" name="Name" scope="default" type="STRING"/>
+            <property expression="//email" name="Email" scope="default" type="STRING"/>
+            <log level="custom">
+              <property expression="//name/text()" name="LOG:Name"/>
+              <property expression="//email/text()" name="LOG:Email"/>
+            </log>
+          </sequence>
+        </target>
+      </iterate>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+  <resource methods="POST" protocol="http" uri-template="/getUsers">
+    <inSequence>
+      <log description="PayloadLog" level="custom">
+        <property name="LOG:HEAD" value="*****#####****######****#"/>
+      </log>
+      <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
+      <property description="Setting http method to GET"
+        name="HTTP_METHOD" scope="axis2" type="STRING" value="GET"/>
+      <!-- <call> -->
+      <!-- <endpoint key="gov:/endpoints/UsersEndpoint.xml"/> -->
+      <!-- </call> -->
+      <log level="custom">
+        <property name="LOG:ITERATE" value="*****#####-START-######****#"/>
+      </log>
+      <iterate expression="$body/jsonArray/jsonElement"
+        id="getSelectedUsers" preservePayload="true">
+        <target>
+          <sequence>
+            <property description="Setting uri.var.resources Parameter"
+              expression="//UserId" name="uri.var.userId"
+              scope="default" type="STRING"/>
+            <log level="custom">
+              <property expression="//UserId" name="uri.var.userId"/>
+            </log>
+            <call>
+              <endpoint key="gov:/endpoints/UsersEndpoint.xml"/>
+            </call>
+            <property expression="//name" name="Name" scope="default" type="STRING"/>
+            <property expression="//email" name="Email" scope="default" type="STRING"/>
+            <log level="custom">
+              <property expression="//name/text()" name="LOG:Name"/>
+              <property expression="//email/text()" name="LOG:Email"/>
+            </log>
+          </sequence>
+        </target>
+      </iterate>
+      <log level="custom">
+        <property name="LOG:AGGREGATE" value="*****#####-START-######****#"/>
+      </log>
+      <!-- <property name="Aggregated_Responses" scope="default"> -->
+      <!-- <jsonObject /> -->
+      <!-- </property> -->
+      <aggregate id="getSelectedUsers">
+        <completeCondition>
+          <messageCount max="-1" min="-1"/>
+        </completeCondition>
+        <onComplete expression="//jsonObject">
+          <log level="full"/>
+          <payloadFactory media-type="json">
+            <format>
+							
+							{"allUserData": $1}
+							
+						</format>
+            <args>
+              <arg evaluator="xml" expression="$body"/>
+            </args>
+          </payloadFactory>
+          <send/>
+        </onComplete>
+      </aggregate>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>

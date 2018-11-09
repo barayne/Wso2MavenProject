@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="NamedEndPoint" xmlns="http://ws.apache.org/ns/synapse">
+  <address trace="disable" uri="http://www.example.org/service"/>
+</endpoint>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/foreach" name="ForEachApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http">
+    <inSequence>
+      <call>
+        <endpoint key="gov:/endpoints/UsersEndpoint.xml"/>
+      </call>
+      <log level="full"/>
+      <foreach expression="$body/jsonArray/jsonElement" id="foreach_1">
+        <sequence>
+          <property expression="//name" name="Name" scope="default" type="STRING"/>
+          <log level="custom">
+            <property expression="//name/text()" name="LOG:Name"/>
+          </log>
+        </sequence>
+      </foreach>
+      <respond/>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>
