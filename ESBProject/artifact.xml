@@ -38,4 +38,31 @@
     <artifact name="classmediator" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/classmediator.xml</file>
     </artifact>
+    <artifact name="IterateApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/IterateApi.xml</file>
+    </artifact>
+    <artifact name="ForEachApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ForEachApi.xml</file>
+    </artifact>
+    <artifact name="EnrichApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/EnrichApi.xml</file>
+    </artifact>
+    <artifact name="CloneApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/CloneApi.xml</file>
+    </artifact>
+    <artifact name="MsgStoreTest" groupId="ke.co.btl.wso2.message-store" version="1.0.0" type="synapse/message-store" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-stores/MsgStoreTest.xml</file>
+    </artifact>
+    <artifact name="MBSuccessSequence" groupId="ke.co.btl.wso2.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/MBSuccessSequence.xml</file>
+    </artifact>
+    <artifact name="MBErrorSequence" groupId="ke.co.btl.wso2.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/MBErrorSequence.xml</file>
+    </artifact>
+    <artifact name="training-message-processor" groupId="ke.co.btl.wso2.message-processors" version="1.0.0" type="synapse/message-processors" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/message-processors/training-message-processor.xml</file>
+    </artifact>
+    <artifact name="MBtrainingApi" groupId="ke.co.btl.wso2.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/MBtrainingApi.xml</file>
+    </artifact>
 </artifacts>

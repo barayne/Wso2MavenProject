@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/clone" name="CloneApi" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="POST" protocol="http" uri-template="/addcomments">
+    <inSequence>
+      <log level="full"/>
+      <property action="remove" name="REST_URL_POSTFIX" scope="axis2"/>
+      <log description="FirstLog" level="custom">
+        <property name="LOG:HEAD" value="################# POST logs Start ####################"/>
+      </log>
+      <clone>
+        <target>
+          <sequence>
+            <log level="custom">
+              <property name="LOG:CLONE" value="##### Clone Data #######"/>
+            </log>
+          </sequence>
+        </target>
+      </clone>
+    </inSequence>
+    <outSequence/>
+    <faultSequence/>
+  </resource>
+</api>

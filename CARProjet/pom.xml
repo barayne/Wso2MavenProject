@@ -15,22 +15,29 @@
   <name>CARProjet</name>
   <description>CARProjet</description>
   <properties>
-    <ke.co.btl.wso2.api_._SwitchMediatorApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._SwitchMediatorApi>
-    <ke.co.btl.wso2.resource_._PayLoadFactoryEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._PayLoadFactoryEndpoint>
-    <ke.co.btl.wso2.resource_._RestTestEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._RestTestEndpoint>
-    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,lib/registry/handlers=jar,service/rule=aar,lib/registry/filter=jar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,synapse/api=xml,wso2/gadget=dar,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
-    <ke.co.btl.wso2.api_._MergeDataApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._MergeDataApi>
-    <ke.co.btl.wso2.api_._PayloadFactoryXmlApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._PayloadFactoryXmlApi>
-    <ke.co.btl.wso2.sequence_._ValidateJsonSequence>capp/EnterpriseServiceBus</ke.co.btl.wso2.sequence_._ValidateJsonSequence>
-    <ke.co.btl.wso2.TrainingClassMediator_._TrainingClassMediator>capp/EnterpriseServiceBus</ke.co.btl.wso2.TrainingClassMediator_._TrainingClassMediator>
+    <ke.co.btl.wso2.resource_._UsersMeargeEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._UsersMeargeEndpoint>
+    <ke.co.btl.wso2.resource_._EnrichEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._EnrichEndpoint>
+    <ke.co.btl.wso2.sequence_._getUSerDataSequence>capp/EnterpriseServiceBus</ke.co.btl.wso2.sequence_._getUSerDataSequence>
     <ke.co.btl.wso2.api_._TrainingFirstRestApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._TrainingFirstRestApi>
     <ke.co.btl.wso2.resource_._ResponseValidationSchema_json>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._ResponseValidationSchema_json>
-    <ke.co.btl.wso2.resource_._MyNameApiEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._MyNameApiEndpoint>
-    <ke.co.btl.wso2.resource_._UsersMeargeEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._UsersMeargeEndpoint>
-    <ke.co.btl.wso2.api_._FilterMediator>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._FilterMediator>
-    <ke.co.btl.wso2.api_._MyNameApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._MyNameApi>
-    <ke.co.btl.wso2.sequence_._getUSerDataSequence>capp/EnterpriseServiceBus</ke.co.btl.wso2.sequence_._getUSerDataSequence>
     <ke.co.btl.wso2.api_._PayloadFactoryApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._PayloadFactoryApi>
+    <ke.co.btl.wso2.TrainingClassMediator_._TrainingClassMediator>capp/EnterpriseServiceBus</ke.co.btl.wso2.TrainingClassMediator_._TrainingClassMediator>
+    <ke.co.btl.wso2.resource_._PayLoadFactoryEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._PayLoadFactoryEndpoint>
+    <ke.co.btl.wso2.resource_._AlbumsMeargeEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._AlbumsMeargeEndpoint>
+    <ke.co.btl.wso2.api_._ForEachApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._ForEachApi>
+    <ke.co.btl.wso2.resource_._MyNameApiEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._MyNameApiEndpoint>
+    <ke.co.btl.wso2.api_._MyNameApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._MyNameApi>
+    <ke.co.btl.wso2.api_._CloneApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._CloneApi>
+    <ke.co.btl.wso2.api_._FilterMediator>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._FilterMediator>
+    <ke.co.btl.wso2.sequence_._ValidateJsonSequence>capp/EnterpriseServiceBus</ke.co.btl.wso2.sequence_._ValidateJsonSequence>
+    <ke.co.btl.wso2.api_._SwitchMediatorApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._SwitchMediatorApi>
+    <ke.co.btl.wso2.resource_._UsersEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._UsersEndpoint>
+    <ke.co.btl.wso2.api_._IterateApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._IterateApi>
+    <ke.co.btl.wso2.api_._PayloadFactoryXmlApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._PayloadFactoryXmlApi>
+    <ke.co.btl.wso2.api_._MergeDataApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._MergeDataApi>
+    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,lib/registry/handlers=jar,service/rule=aar,lib/registry/filter=jar,synapse/message-store=xml,event/stream=json,service/meta=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,synapse/api=xml,wso2/gadget=dar,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
+    <ke.co.btl.wso2.resource_._RestTestEndpoint>capp/EnterpriseServiceBus</ke.co.btl.wso2.resource_._RestTestEndpoint>
+    <ke.co.btl.wso2.api_._EnrichApi>capp/EnterpriseServiceBus</ke.co.btl.wso2.api_._EnrichApi>
   </properties>
   <dependencies>
     <dependency>
@@ -41,15 +48,56 @@
     </dependency>
     <dependency>
       <groupId>ke.co.btl.wso2.resource</groupId>
-      <artifactId>MyNameApiEndpoint</artifactId>
+      <artifactId>RestTestEndpoint</artifactId>
       <version>1.0.0</version>
       <type>zip</type>
     </dependency>
     <dependency>
       <groupId>ke.co.btl.wso2.resource</groupId>
-      <artifactId>RestTestEndpoint</artifactId>
+      <artifactId>UsersMeargeEndpoint</artifactId>
       <version>1.0.0</version>
       <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.TrainingClassMediator</groupId>
+      <artifactId>TrainingClassMediator</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.api</groupId>
+      <artifactId>CloneApi</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.api</groupId>
+      <artifactId>EnrichApi</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.api</groupId>
+      <artifactId>FilterMediator</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.api</groupId>
+      <artifactId>ForEachApi</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.api</groupId>
+      <artifactId>IterateApi</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.api</groupId>
+      <artifactId>MergeDataApi</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
     </dependency>
     <dependency>
       <groupId>ke.co.btl.wso2.api</groupId>
@@ -64,20 +112,8 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>ke.co.btl.wso2.resource</groupId>
-      <artifactId>PayLoadFactoryEndpoint</artifactId>
-      <version>1.0.0</version>
-      <type>zip</type>
-    </dependency>
-    <dependency>
       <groupId>ke.co.btl.wso2.api</groupId>
       <artifactId>PayloadFactoryXmlApi</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>ke.co.btl.wso2.api</groupId>
-      <artifactId>FilterMediator</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
@@ -88,14 +124,38 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>ke.co.btl.wso2.api</groupId>
-      <artifactId>MergeDataApi</artifactId>
+      <groupId>ke.co.btl.wso2.sequence</groupId>
+      <artifactId>getUSerDataSequence</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.sequence</groupId>
+      <artifactId>ValidateJsonSequence</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>ke.co.btl.wso2.resource</groupId>
-      <artifactId>UsersMeargeEndpoint</artifactId>
+      <artifactId>AlbumsMeargeEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.resource</groupId>
+      <artifactId>EnrichEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.resource</groupId>
+      <artifactId>MyNameApiEndpoint</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>ke.co.btl.wso2.resource</groupId>
+      <artifactId>PayLoadFactoryEndpoint</artifactId>
       <version>1.0.0</version>
       <type>zip</type>
     </dependency>
@@ -106,21 +166,10 @@
       <type>zip</type>
     </dependency>
     <dependency>
-      <groupId>ke.co.btl.wso2.sequence</groupId>
-      <artifactId>ValidateJsonSequence</artifactId>
+      <groupId>ke.co.btl.wso2.resource</groupId>
+      <artifactId>UsersEndpoint</artifactId>
       <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>ke.co.btl.wso2.sequence</groupId>
-      <artifactId>getUSerDataSequence</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>ke.co.btl.wso2.TrainingClassMediator</groupId>
-      <artifactId>TrainingClassMediator</artifactId>
-      <version>1.0.0</version>
+      <type>zip</type>
     </dependency>
   </dependencies>
   <repositories>
@@ -200,7 +249,7 @@
               <trustStorePath>${basedir}/src/main/resources/security/wso2carbon.jks</trustStorePath>
               <trustStorePassword>wso2carbon</trustStorePassword>
               <trustStoreType>JKS</trustStoreType>
-              <serverUrl>https://localhost:9443</serverUrl>
+              <serverUrl>https://10.30.220.224:9443</serverUrl>
               <userName>admin</userName>
               <password>admin</password>
               <operation>deploy</operation>
