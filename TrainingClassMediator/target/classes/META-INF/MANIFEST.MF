@@ -3,7 +3,7 @@ Bundle-Description: TrainingClassMediator
 Bundle-SymbolicName: TrainingClassMediator
 Built-By: barayne
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1541773186047
+Bnd-LastModified: 1541773998949
 Import-Package: org.apache.synapse,org.apache.synapse.mediators
 DynamicImport-Package: *
 Tool: Bnd-1.15.0
